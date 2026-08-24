@@ -1,9 +1,10 @@
 # Does-the-London-Fire-Brigade-meet-its-6-minute-response-target-equally-across-London-
 Project Analysis: Does the London Fire Brigade meet its 6 minute response target equally across London?
-
+Tools: SQL, DuckDB, Python, VSCode
 # The Findings
 London Fire Brigade are able to meet its published pan-London target of a 6 minute and that is 360 seconds. 
 Two boroughs which i will compare is Hillingdon and Kensington and Chelsea. Hillingdon was the slowest whilst Kensington and Chelsea were the fastest borough for LFB(London Fire Brigade) to reach. 
+That average hides a 114 second spread between boroughs. Hillingdon averages 385 seconds, above target. Kensington and Chelsea averages 271.
 
 # Why this matters
 LFB reports performance as a single pan-London average. On that measure the service passes. Measuring borough by borough shows residents of outer boroughs wait consistently longer than the target the Brigade sets itself. 
@@ -61,7 +62,7 @@ Hillingdon's out-of-ground penalty is 112 seconds. Its local station response av
 
 Hillingdon is slow even when its own station responds. Availability is not the cause there. The distances involved are, and no amount of improving appliance availability would fix it.
 
-Conclusion
+**Conclusion**
 
 Two distinct causes sit behind the borough gap.
 
@@ -71,7 +72,16 @@ Hillingdon is slow at baseline, before availability is considered. This is a geo
 
 Reporting a single pan-London average obscures both. A borough-level breakdown, or a percentage-within-target measure alongside the average, would make the variation visible.
 
-#Data download
+**Caveats**
+Traffic, road network and time of day are not controlled for. All three plausibly affect response times and none are in this dataset.
+Borough land area is not included. The coverage-area argument is inferred from response times and station counts rather than measured directly. Joining ONS borough areas would test it properly.
+Station counts are derived from station names appearing in incident records. Stations with no callouts in the period would not appear.
+Incident severity is not controlled for. Higher priority calls may be dispatched differently.
+Special Services, 40% of all LFB activity, are excluded. This analysis describes fire and false alarm response only.
+Attendance times are recorded by LFB. No independent verifi
+
+
+# Data download
 Due to large file size I could not upload here but you can see it on London fire brigade official website: 
 https://data.london.gov.uk/dataset/london-fire-brigade-incident-records-em8xy
 
