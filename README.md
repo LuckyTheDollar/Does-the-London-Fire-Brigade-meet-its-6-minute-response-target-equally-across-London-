@@ -73,12 +73,12 @@ Hillingdon is slow at baseline, before availability is considered. This is a geo
 Reporting a single pan-London average obscures both. A borough-level breakdown, or a percentage-within-target measure alongside the average, would make the variation visible.
 
 **Caveats**
-Traffic, road network and time of day are not controlled for. All three plausibly affect response times and none are in this dataset.
-Borough land area is not included. The coverage-area argument is inferred from response times and station counts rather than measured directly. Joining ONS borough areas would test it properly.
-Station counts are derived from station names appearing in incident records. Stations with no callouts in the period would not appear.
-Incident severity is not controlled for. Higher priority calls may be dispatched differently.
-Special Services, 40% of all LFB activity, are excluded. This analysis describes fire and false alarm response only.
-Attendance times are recorded by LFB. No independent verifi
+1. Traffic, road network and time of day are not controlled for. All three plausibly affect response times and none are in this dataset
+2. Borough land area is not included. The coverage-area argument is inferred from response times and station counts rather than measured directly. Joining ONS borough areas would test it properly.
+3. Station counts are derived from station names appearing in incident records. Stations with no callouts in the period would not appear.
+4. Incident severity is not controlled for. Higher priority calls may be dispatched differently.
+5. Special Services, 40% of all LFB activity, are excluded. This analysis describes fire and false alarm response only.
+6. Attendance times are recorded by LFB. No independent verification is possible.
 
 
 # Data download
